@@ -3,7 +3,7 @@ import "./Dialler.css";
 import KeypadButton from "./KeypadButton";
 
 const Dialler = ({ number, setNumber }) => {
-  const handleNumberChange = event => {
+  const handleNumberChange = (event) => {
     setNumber(event.target.value);
   };
 
@@ -11,7 +11,7 @@ const Dialler = ({ number, setNumber }) => {
     setNumber(number.substring(0, number.length - 1));
   };
 
-  const handleNumberPressed = newNumber => {
+  const handleNumberPressed = (newNumber) => {
     return () => {
       setNumber(`${number}${newNumber}`);
     };
@@ -24,6 +24,7 @@ const Dialler = ({ number, setNumber }) => {
         value={number}
         onChange={handleNumberChange}
         className="input"
+        placeholder="number"
       />
       <ol className="keypad">
         <li>
